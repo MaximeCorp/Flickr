@@ -1,27 +1,33 @@
-# FlickrAppV2
+## How to Launch the Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+This guide provides instructions to set up and run the application in a local development environment.
 
-## Development server
+### Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+You must have the following software installed on your machine:
 
-## Code scaffolding
+- **Node.js** (version 18.13.0 or higher is recommended)
+- **npm** (Node Package Manager, which comes with Node.js)
+- **Angular CLI** (You can install it globally with `npm install -g @angular/cli`)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Installation
 
-## Build
+1.  **Install all project dependencies**:
+    This command reads the `package.json` file and installs all required packages.
+    ```bash
+    npm install
+    ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Running the Development Server
 
-## Running unit tests
+1.  **Start the local development server**:
+    Run the `serve` script, which uses the Angular CLI to serve the application.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    ```bash
+    ng serve
+    ```
 
-## Running end-to-end tests
+2.  **Access the application**:
+    Open your web browser and navigate to `http://localhost:4200`. The application will automatically reload if you change any of the source files.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Note:** The application is configured to use local mock data and does **not** require a Flickr API key to run.
