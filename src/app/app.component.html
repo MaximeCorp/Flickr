@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <header class="text-center my-4">
+    <h1>Flickr Photo Search</h1>
+  </header>
+
+  <main>
+    <app-search-bar (search)="onSearch($event)"></app-search-bar>
+    <app-filter-options
+      (filtersChanged)="onFilterChange($event)"
+    ></app-filter-options>
+    <app-photo-list [photos]="photos"></app-photo-list>
+  </main>
+
+  <footer class="text-center my-4 text-muted">
+    <p>Powered by the Flickr API</p>
+  </footer>
+</div>

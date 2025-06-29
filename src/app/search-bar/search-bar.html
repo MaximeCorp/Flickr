@@ -1,0 +1,12 @@
+<div class="input-group mb-3">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Enter keywords to search photos..."
+    [(ngModel)]="searchTerm"
+    (keyup.enter)="onSearch()"
+  />
+  <button class="btn btn-primary" type="button" (click)="onSearch()">
+    Search
+  </button>
+</div>

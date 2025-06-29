@@ -1,0 +1,22 @@
+<div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
+  <div class="col" *ngFor="let photo of photos">
+    <div class="card h-100">
+      <a [routerLink]="['/photo', photo.id]">
+        <img
+          [src]="flickrService.getPhotoUrl(photo, 'small')"
+          class="card-img-top"
+          [alt]="photo.title"
+          style="height: 250px; object-fit: cover"
+        />
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">{{ photo.title }}</h5>
+        <p class="card-text">By: {{ photo.owner }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="photos.length === 0" class="text-center mt-5">
+  <p>Start searching for photos!</p>
+</div>

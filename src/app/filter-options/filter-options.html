@@ -1,0 +1,99 @@
+<div class="card mt-4 mb-4">
+  <div class="card-header">Advanced Filters</div>
+  <div class="card-body">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <label for="sortOrder" class="form-label">Sort By</label>
+        <select
+          id="sortOrder"
+          class="form-select"
+          [(ngModel)]="sortOrder"
+          (change)="onFilterChange()"
+        >
+          <option value="relevance">Relevance</option>
+          <option value="date-posted-desc">Date Posted (Newest)</option>
+          <option value="date-posted-asc">Date Posted (Oldest)</option>
+          <option value="interestingness-desc">
+            Interestingness (Highest)
+          </option>
+          <option value="interestingness-asc">Interestingness (Lowest)</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label for="imageSize" class="form-label">Image Size</label>
+        <select
+          id="imageSize"
+          class="form-select"
+          [(ngModel)]="imageSize"
+          (change)="onFilterChange()"
+        >
+          <option value="">Any</option>
+          <option value="s">Small (75x75)</option>
+          <option value="q">Medium (150x150)</option>
+          <option value="m">Large (240)</option>
+          <option value="b">Extra Large (1024)</option>
+          <option value="k">2k (2048)</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label for="minDate" class="form-label">Date Range</label>
+        <div class="input-group">
+          <input
+            type="date"
+            id="minDate"
+            class="form-control"
+            [(ngModel)]="minDate"
+            (change)="onFilterChange()"
+          />
+          <span class="input-group-text">to</span>
+          <input
+            type="date"
+            id="maxDate"
+            class="form-control"
+            [(ngModel)]="maxDate"
+            (change)="onFilterChange()"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="tags" class="form-label">Tags (comma-separated)</label>
+        <input
+          type="text"
+          id="tags"
+          class="form-control"
+          placeholder="e.g., landscape, travel"
+          [(ngModel)]="tags"
+          (change)="onFilterChange()"
+        />
+      </div>
+
+      <div class="col-md-3 d-flex align-items-end">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="nsfw"
+            [(ngModel)]="isNSFW"
+            (change)="onFilterChange()"
+          />
+          <label class="form-check-label" for="nsfw"> NSFW </label>
+        </div>
+      </div>
+      <div class="col-md-3 d-flex align-items-end">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="inGallery"
+            [(ngModel)]="inGallery"
+            (change)="onFilterChange()"
+          />
+          <label class="form-check-label" for="inGallery"> In Gallery </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
